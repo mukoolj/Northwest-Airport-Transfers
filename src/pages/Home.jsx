@@ -26,22 +26,9 @@ export default function Home() {
       <Hero />
 
       <QuickQuote />
-      <PricingCallout className="bg-canvas-alt" />
+      <PricingCallout />
 
       <IntroOfferBanner />
-      <WhatsAppNudge className="bg-canvas" />
-
-      <KeyFeatures />
-      <CompetitorComparison />
-
-      <FleetSection />
-      <PricingCallout className="bg-canvas" />
-
-      <Testimonials />
-      <PricingCallout className="bg-canvas-alt" />
-
-      <WhyChooseUs />
-      <PricingCallout className="bg-canvas" />
 
       <section className="bg-canvas py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -66,7 +53,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <WhatsAppNudge className="bg-canvas-alt" />
+      <WhatsAppNudge className="bg-canvas" />
+
+      <KeyFeatures />
+      <CompetitorComparison />
+
+      <FleetSection />
+      <PricingCallout />
+
+      <Testimonials />
+      <PricingCallout />
+
+      <WhyChooseUs />
+      <PricingCallout />
 
       <section className="bg-canvas-alt py-16 text-center">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">

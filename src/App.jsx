@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import TopAnnouncementBar from './components/TopAnnouncementBar'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="flex min-h-screen flex-col bg-canvas">
       <ScrollToTop />
+      <TopAnnouncementBar />
       <Navbar />
       <main className="flex-1 pb-16 md:pb-0">
         <Routes>
