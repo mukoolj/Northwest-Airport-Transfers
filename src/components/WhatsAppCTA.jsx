@@ -8,6 +8,7 @@ export default function WhatsAppCTA({
   full = false,
   size = 'md',
   variant = 'green',
+  theme = 'light',
   showPromise = true,
   promiseText,
   className = '',
@@ -21,6 +22,8 @@ export default function WhatsAppCTA({
     variant === 'gold'
       ? 'bg-gradient-to-r from-gold-300 to-gold-500 text-navy-900 shadow-gold-500/30'
       : 'bg-whatsapp text-white shadow-whatsapp/25'
+
+  const promiseClass = theme === 'dark' ? 'text-white/50' : 'text-slate-500'
 
   return (
     <div className={`flex flex-col items-center gap-2 ${full ? 'w-full' : ''} ${className}`}>
@@ -37,9 +40,9 @@ export default function WhatsAppCTA({
       </a>
       {showPromise && (
         promiseText ? (
-          <p className="text-xs text-white/50">{promiseText}</p>
+          <p className={`text-xs ${promiseClass}`}>{promiseText}</p>
         ) : (
-          <ResponseTimePromise />
+          <ResponseTimePromise theme={theme} />
         )
       )}
     </div>

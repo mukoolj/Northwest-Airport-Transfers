@@ -16,30 +16,30 @@ export default function Home() {
       <Hero />
 
       <QuickQuote />
-      <WhatsAppNudge className="bg-navy-800" />
+      <WhatsAppNudge className="bg-canvas-alt" />
 
       <IntroOfferBanner />
-      <WhatsAppNudge />
+      <WhatsAppNudge className="bg-canvas" />
 
       <KeyFeatures />
-      <WhatsAppNudge />
+      <WhatsAppNudge className="bg-canvas-alt" />
 
       <FleetSection />
-      <WhatsAppNudge className="bg-navy-800" />
+      <WhatsAppNudge className="bg-canvas" />
 
       <Testimonials />
-      <WhatsAppNudge />
+      <WhatsAppNudge className="bg-canvas-alt" />
 
       <WhyChooseUs />
-      <WhatsAppNudge className="bg-navy-800" />
+      <WhatsAppNudge className="bg-canvas" />
 
-      <section className="bg-navy-900 py-16">
+      <section className="bg-canvas py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
               Fixed-fare pricing by region
             </h2>
-            <p className="mt-3 text-white/65">
+            <p className="mt-3 text-slate-600">
               Introductory pricing valid until 31 December 2026. All tolls included, no hidden fees.
             </p>
           </div>
@@ -49,28 +49,28 @@ export default function Home() {
           <div className="mt-8 text-center">
             <Link
               to="/pricing"
-              className="text-sm font-semibold text-gold-400 underline-offset-4 hover:underline"
+              className="text-sm font-semibold text-gold-600 underline-offset-4 hover:underline"
             >
               View full pricing and suburb list →
             </Link>
           </div>
         </div>
       </section>
-      <WhatsAppNudge className="bg-navy-800" />
+      <WhatsAppNudge className="bg-canvas-alt" />
 
-      <section className="bg-navy-800 py-16 text-center">
+      <section className="bg-canvas-alt py-16 text-center">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
             Ready to book your transfer?
           </h2>
-          <p className="mt-3 text-white/65">
+          <p className="mt-3 text-slate-600">
             Message us on WhatsApp for a fixed quote, or fill out the booking form.
           </p>
           <div className="mt-7 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <WhatsAppCTA label="Book on WhatsApp" size="lg" showPromise={false} />
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/25 px-8 py-4 text-base font-semibold text-white transition-colors hover:border-gold-400 hover:text-gold-400"
+              className="inline-flex items-center justify-center rounded-full border border-navy-900/20 px-8 py-4 text-base font-semibold text-navy-900 transition-colors hover:border-gold-500 hover:text-gold-600"
             >
               Go to Booking Form
             </Link>

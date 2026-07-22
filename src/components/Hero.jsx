@@ -24,7 +24,7 @@ export default function Hero() {
         </p>
 
         <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-          <WhatsAppCTA label="Book on WhatsApp" size="lg" />
+          <WhatsAppCTA label="Book on WhatsApp" size="lg" theme="dark" />
           <a
             href={BUSINESS.phoneTel}
             className="inline-flex items-center gap-2 rounded-full border border-white/25 px-8 py-4 text-base font-semibold text-white transition-colors hover:border-gold-400 hover:text-gold-400 sm:text-lg"

@@ -2,12 +2,12 @@ import WhatsAppCTA from './WhatsAppCTA'
 
 export default function QuickQuote() {
   return (
-    <section className="bg-navy-800 py-14">
+    <section className="bg-canvas-alt py-14">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-        <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+        <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
           Get your fixed fare in minutes
         </h2>
-        <p className="mt-3 text-white/70">
+        <p className="mt-3 text-slate-600">
           Just tell us your suburb, travel date and number of passengers
         </p>
         <div className="mt-7">

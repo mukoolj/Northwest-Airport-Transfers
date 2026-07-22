@@ -6,7 +6,7 @@ import { calculateFare } from '../lib/pricing'
 import { supabase } from '../lib/supabaseClient'
 
 const inputClass =
-  'w-full rounded-lg border border-white/15 bg-navy-900 px-3.5 py-2.5 text-sm text-white placeholder-white/30 focus:border-gold-400 focus:outline-none focus:ring-1 focus:ring-gold-400'
+  'w-full rounded-lg border border-gray-300 bg-white px-3.5 py-2.5 text-sm text-navy-900 placeholder-slate-400 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500'
 
 const initialForm = {
   fullName: '',
@@ -32,14 +32,14 @@ const initialForm = {
 function Field({ label, required, optional, error, helper, children, className = '' }) {
   return (
     <div className={className}>
-      <label className="mb-1.5 block text-sm font-medium text-white/80">
+      <label className="mb-1.5 block text-sm font-medium text-slate-700">
         {label}
-        {required && <span className="ml-0.5 text-red-400">*</span>}
-        {optional && <span className="ml-1.5 text-xs font-normal text-white/40">(optional)</span>}
+        {required && <span className="ml-0.5 text-red-600">*</span>}
+        {optional && <span className="ml-1.5 text-xs font-normal text-slate-400">(optional)</span>}
       </label>
       {children}
-      {helper && !error && <p className="mt-1 text-xs text-white/40">{helper}</p>}
-      {error && <p className="mt-1 text-xs text-red-400">{error}</p>}
+      {helper && !error && <p className="mt-1 text-xs text-slate-400">{helper}</p>}
+      {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
     </div>
   )
 }
@@ -286,17 +286,17 @@ export default function BookingForm() {
       </div>
 
       {fare && (
-        <div className="rounded-xl border border-gold-400/30 bg-gold-400/10 px-5 py-4 text-center">
-          <p className="font-display text-lg font-bold text-gold-400">
+        <div className="rounded-xl border border-gold-300 bg-gold-50 px-5 py-4 text-center">
+          <p className="font-display text-lg font-bold text-gold-700">
             Your estimated fare is ${fare.amount} — fixed, all tolls included.
           </p>
-          <p className="mt-1 text-xs text-white/50">{fare.tier} rate for {fare.region.label}</p>
+          <p className="mt-1 text-xs text-slate-500">{fare.tier} rate for {fare.region.label}</p>
         </div>
       )}
 
-      <div className="border-t border-white/10 pt-8">
-        <h3 className="font-display text-lg font-bold text-white">Optional details</h3>
-        <p className="mt-1 text-sm text-white/50">
+      <div className="border-t border-line pt-8">
+        <h3 className="font-display text-lg font-bold text-navy-900">Optional details</h3>
+        <p className="mt-1 text-sm text-slate-500">
           Help us prepare the right vehicle — none of this is required to submit.
         </p>
 
@@ -373,25 +373,25 @@ export default function BookingForm() {
       </div>
 
       <div>
-        <label className="flex items-start gap-3 text-sm text-white/75">
+        <label className="flex items-start gap-3 text-sm text-slate-700">
           <input
             type="checkbox"
             checked={form.consent}
             onChange={(e) => update('consent', e.target.checked)}
-            className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border border-white/40 bg-navy-900 accent-gold-400 focus:outline-none focus:ring-1 focus:ring-gold-400"
+            className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border border-gray-400 bg-white accent-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
           />
           I understand this is an estimated fare pending availability confirmation
         </label>
-        {errors.consent && <p className="mt-1 text-xs text-red-400">{errors.consent}</p>}
+        {errors.consent && <p className="mt-1 text-xs text-red-600">{errors.consent}</p>}
       </div>
 
       {duplicateMessage && (
-        <div className="rounded-lg border border-red-400/40 bg-red-400/10 px-4 py-3 text-sm text-red-300">
+        <div className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700">
           {duplicateMessage}
         </div>
       )}
       {submitError && (
-        <div className="rounded-lg border border-red-400/40 bg-red-400/10 px-4 py-3 text-sm text-red-300">
+        <div className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700">
           {submitError}
         </div>
       )}

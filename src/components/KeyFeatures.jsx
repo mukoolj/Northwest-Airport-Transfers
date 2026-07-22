@@ -5,10 +5,10 @@ const ICONS = [DollarSign, Baby, PlaneLanding, TrendingDown, Ticket, Clock]
 
 export default function KeyFeatures() {
   return (
-    <section className="bg-navy-900 py-16">
+    <section className="bg-canvas py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
             Why families and business travellers choose us
           </h2>
         </div>
@@ -19,13 +19,13 @@ export default function KeyFeatures() {
             return (
               <div
                 key={f.title}
-                className="rounded-2xl border border-white/10 bg-navy-800 p-6 transition-colors hover:border-gold-400/40"
+                className="rounded-2xl border border-line bg-white p-6 shadow-sm transition-colors hover:border-gold-400"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-400/10 text-gold-400">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-50 text-gold-600">
                   <Icon size={22} />
                 </div>
-                <h3 className="mt-4 font-display text-lg font-bold text-white">{f.title}</h3>
-                <p className="mt-1.5 text-sm text-white/65">{f.desc}</p>
+                <h3 className="mt-4 font-display text-lg font-bold text-navy-900">{f.title}</h3>
+                <p className="mt-1.5 text-sm text-slate-600">{f.desc}</p>
               </div>
             )
           })}

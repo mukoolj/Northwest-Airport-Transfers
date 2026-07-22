@@ -12,13 +12,13 @@ const REASONS = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-navy-800 py-16">
+    <section className="bg-canvas-alt py-16">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-2 md:items-center">
         <div>
-          <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
             Why choose Northwest Airport Transfers
           </h2>
-          <p className="mt-4 text-white/65">
+          <p className="mt-4 text-slate-600">
             We're a local North West Sydney business built around one idea:
             airport transfers should be simple, reliable and stress-free —
             every time.
@@ -30,11 +30,11 @@ export default function WhyChooseUs() {
 
         <ul className="space-y-4">
           {REASONS.map((reason) => (
-            <li key={reason} className="flex items-start gap-3 rounded-xl bg-navy-900 p-4">
-              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-400/15 text-gold-400">
+            <li key={reason} className="flex items-start gap-3 rounded-xl border border-line bg-white p-4 shadow-sm">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-50 text-gold-600">
                 <Check size={14} strokeWidth={3} />
               </span>
-              <span className="text-sm text-white/80">{reason}</span>
+              <span className="text-sm text-slate-700">{reason}</span>
             </li>
           ))}
         </ul>

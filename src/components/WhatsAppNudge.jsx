@@ -8,7 +8,7 @@ export default function WhatsAppNudge({ className = '' }) {
         href={whatsappLink()}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-400 transition-colors hover:text-gold-300"
+        className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-600 transition-colors hover:text-gold-700"
       >
         Questions? Chat with us on WhatsApp
         <ArrowRight size={16} />

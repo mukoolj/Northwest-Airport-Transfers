@@ -16,9 +16,17 @@
   --color-gold-500: #e4ad3c;
   --color-gold-600: #c78b09;
   --color-gold-700: #a5730a;
+  --color-gold-50: #fdf6e6;
+  --color-gold-100: #faebc4;
+  --color-gold-200: #f7dfa0;
 
   --color-whatsapp: #25d366;
   --color-whatsapp-dark: #1da851;
+
+  /* Light theme surfaces used by every section except the hero */
+  --color-canvas: #ffffff;
+  --color-canvas-alt: #f4f6fb;
+  --color-line: #e6e8f0;
 }
 
 html {
@@ -26,8 +34,8 @@ html {
 }
 
 body {
-  background-color: var(--color-navy-900);
-  color: #f3f0e8;
+  background-color: var(--color-canvas);
+  color: var(--color-navy-900);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
