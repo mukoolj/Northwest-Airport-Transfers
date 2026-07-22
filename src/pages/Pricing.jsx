@@ -1,25 +1,35 @@
 import PricingCards from '../components/PricingCards'
 import WhatsAppNudge from '../components/WhatsAppNudge'
 import WhatsAppCTA from '../components/WhatsAppCTA'
+import HowItWorks from '../components/HowItWorks'
+import Faq from '../components/Faq'
+import Seo from '../components/Seo'
 import { useCountdown } from '../hooks/useCountdown'
-import { BUSINESS } from '../lib/constants'
+import { BUSINESS, FAQS } from '../lib/constants'
+import { taxiServiceJsonLd, faqJsonLd } from '../lib/seo'
 
 export default function Pricing() {
   const { days, expired } = useCountdown(BUSINESS.offerEndDate)
 
   return (
     <>
+      <Seo
+        title="Airport Transfer Prices North West Sydney | Fixed Fares from $89"
+        description="Fixed airport transfer fares from $89 across North West Sydney. Parramatta, Blacktown, Hills District, Rouse Hill and more. All tolls included. No hidden charges."
+        jsonLd={[taxiServiceJsonLd, faqJsonLd(FAQS)]}
+      />
+
       <section className="bg-canvas py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <span className="inline-block rounded-full border border-gold-300 bg-gold-50 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-gold-600">
             Fixed-Fare Pricing
           </span>
           <h1 className="mt-4 font-display text-4xl font-extrabold text-navy-900 sm:text-5xl">
-            Pricing by Region
+            Transparent pricing. No hidden fees.
           </h1>
           <p className="mt-4 text-slate-600">
-            All fares are fixed, include every toll, and are confirmed before you travel.
-            No surge pricing, ever.
+            Every fare includes all tolls, door-to-door service and direct
+            communication with your driver. What we quote is what you pay.
           </p>
           {!expired && (
             <p className="mt-2 text-sm font-semibold text-gold-600">
@@ -37,7 +47,18 @@ export default function Pricing() {
 
       <WhatsAppNudge className="bg-canvas-alt" />
 
-      <section className="bg-canvas-alt py-16">
+      <HowItWorks />
+
+      <section className="bg-canvas-alt py-14">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+          <p className="font-display text-lg font-bold text-navy-900 sm:text-xl">
+            A standard sedan from 13cabs costs $108 from Parramatta. We charge
+            $89 — in a premium 7-seat SUV with all tolls included.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-canvas py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="text-center font-display text-2xl font-bold text-navy-900 sm:text-3xl">
             What counts as Standard vs Family/Group?
@@ -61,6 +82,8 @@ export default function Pricing() {
           </p>
         </div>
       </section>
+
+      <Faq />
 
       <section className="bg-canvas py-16 text-center">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">

@@ -81,15 +81,62 @@ export const REGIONS = [
 export const FLEET = [
   {
     name: "Jeep Grand Cherokee L",
-    tagline: "Full-size 7-seat SUV",
+    category: "Full-size 7-seat SUV",
+    description: "Spacious, comfortable and family-ready, with room for the whole group plus every bag.",
+    image: null,
+    alt: "Jeep Grand Cherokee L 7 seat SUV airport transfer North West Sydney",
+    filter: "brightness(0.9) contrast(1.05)",
   },
   {
     name: "Tesla Model Y",
-    tagline: "Premium electric SUV",
+    category: "Premium electric SUV",
+    description: "A smooth, quiet, all-electric ride for business travellers and couples who want a premium arrival.",
+    image: null,
+    alt: "Tesla Model Y electric SUV airport transfer Sydney",
+    filter: "none",
   },
   {
     name: "BYD Sealion 8",
-    tagline: "Premium electric SUV",
+    category: "Premium electric SUV",
+    description: "Generous space and a refined electric drive, perfect for groups travelling in comfort.",
+    image: null,
+    alt: "BYD Sealion 8 electric SUV airport transfer Sydney",
+    filter: "brightness(0.9) contrast(1.05)",
+  },
+];
+
+// Same-route fare comparison shown on the homepage (Parramatta benchmark)
+export const COMPETITORS = [
+  { service: "Uber XL (no guarantee)", fare: "~$116–133" },
+  { service: "13cabs standard sedan", fare: "~$108" },
+  { service: "13cabs Maxi Taxi", fare: "~$206" },
+  { service: "Northwest Airport Transfers", fare: "from $89", highlight: true },
+];
+
+export const FAQS = [
+  {
+    q: "Are tolls really included?",
+    a: "Yes — every fare includes all tolls regardless of route. No conditions, no extras.",
+  },
+  {
+    q: "What if my flight is delayed?",
+    a: "We track your flight in real time and adjust our arrival. No waiting charges for flight delays.",
+  },
+  {
+    q: "What counts as Family/Group fare?",
+    a: "Child seats, 4 or more bags, a pram, or 5 or more passengers.",
+  },
+  {
+    q: "Are there surcharges for early morning or late night?",
+    a: "No — available 24/7, no surcharges. The fare quoted is the fare you pay.",
+  },
+  {
+    q: "How do I pay?",
+    a: "Card, bank transfer or cash — whatever suits you.",
+  },
+  {
+    q: "Do I need to bring my own child seat?",
+    a: "No — we carry a Britax convertible seat (0–4 yrs) and booster seat (0–8 yrs), fitted and ready on arrival.",
   },
 ];
 

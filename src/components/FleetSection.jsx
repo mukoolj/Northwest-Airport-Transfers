@@ -16,13 +16,29 @@ export default function FleetSection() {
           {FLEET.map((v) => (
             <div
               key={v.name}
-              className="flex flex-col items-center rounded-2xl border border-line bg-white p-8 text-center shadow-sm transition-colors hover:border-gold-400"
+              className="overflow-hidden rounded-2xl border border-line bg-white shadow-sm transition-colors hover:border-gold-400"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-50 text-gold-600">
-                <Car size={30} />
+              <div className="flex h-48 items-center justify-center bg-canvas-alt">
+                {v.image ? (
+                  <img
+                    src={v.image}
+                    alt={v.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                    style={{ filter: v.filter }}
+                  />
+                ) : (
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-50 text-gold-600">
+                    <Car size={30} />
+                  </div>
+                )}
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold text-navy-900">{v.name}</h3>
-              <p className="mt-1 text-sm text-gold-600">{v.tagline}</p>
+              <div className="bg-navy-900 p-6 text-center">
+                <h3 className="font-display text-xl font-bold text-white">{v.name}</h3>
+                <p className="mt-1 text-sm font-semibold text-gold-400">{v.category}</p>
+                <p className="mt-2 text-sm text-white/70">{v.description}</p>
+                <p className="mt-3 text-xs text-white/40">Subject to availability</p>
+              </div>
             </div>
           ))}
         </div>

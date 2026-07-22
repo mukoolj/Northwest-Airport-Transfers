@@ -34,12 +34,17 @@ export default function Navbar() {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors hover:text-gold-400 ${
-                  isActive ? 'text-gold-400' : 'text-white/85'
-                }`
+                `flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-gold-400 ${
+                  isActive || link.to === '/pricing' ? 'text-gold-400' : 'text-white/85'
+                } ${link.to === '/pricing' ? 'font-bold' : ''}`
               }
             >
               {link.label}
+              {link.to === '/pricing' && (
+                <span className="rounded-full bg-gold-400/15 px-2 py-0.5 text-[10px] font-bold text-gold-400">
+                  from $89
+                </span>
+              )}
             </NavLink>
           ))}
         </div>
@@ -82,10 +87,17 @@ export default function Navbar() {
                 to={link.to}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `text-base font-medium ${isActive ? 'text-gold-400' : 'text-white/85'}`
+                  `flex items-center gap-2 text-base font-medium ${
+                    isActive || link.to === '/pricing' ? 'text-gold-400' : 'text-white/85'
+                  } ${link.to === '/pricing' ? 'font-bold' : ''}`
                 }
               >
                 {link.label}
+                {link.to === '/pricing' && (
+                  <span className="rounded-full bg-gold-400/15 px-2 py-0.5 text-[10px] font-bold text-gold-400">
+                    from $89
+                  </span>
+                )}
               </NavLink>
             ))}
             <a href={BUSINESS.phoneTel} className="flex items-center gap-2 text-base font-medium text-white/85">

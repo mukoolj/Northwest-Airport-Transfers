@@ -1,62 +1,72 @@
 import { Phone, Mail } from 'lucide-react'
-import { BUSINESS } from '../lib/constants'
+import { BUSINESS, whatsappLink } from '../lib/constants'
 import WhatsAppCTA from '../components/WhatsAppCTA'
-import BookingForm from '../components/BookingForm'
+import Seo from '../components/Seo'
+import { taxiServiceJsonLd } from '../lib/seo'
+
+const QUOTE_ITEMS = [
+  { emoji: '📍', label: 'Suburb' },
+  { emoji: '📅', label: 'Date & time' },
+  { emoji: '👥', label: "Passengers & children's ages" },
+  { emoji: '🧳', label: 'Bags large & small' },
+  { emoji: '🍼', label: 'Pram yes/no' },
+  { emoji: '✈️', label: 'Departing or arriving' },
+  { emoji: '', label: 'Terminal' },
+  { emoji: '', label: 'Flight number if arriving' },
+]
 
 export default function Contact() {
   return (
     <>
+      <Seo
+        title="Book Airport Transfer North West Sydney | Northwest Airport Transfers"
+        description="Book your North West Sydney airport transfer on WhatsApp. Fixed fares, child seats, flight tracking. Call or message 0493 002 728."
+        jsonLd={taxiServiceJsonLd}
+      />
+
       <section className="bg-canvas py-16">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <span className="inline-block rounded-full border border-gold-300 bg-gold-50 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-gold-600">
             Contact / Book Now
           </span>
           <h1 className="mt-4 font-display text-4xl font-extrabold text-navy-900 sm:text-5xl">
-            Book your airport transfer
+            Ready to book or get a quote?
           </h1>
           <p className="mt-4 text-slate-600">
-            Reach us on WhatsApp for the fastest response, or complete the booking form below.
+            Reach us however suits you — WhatsApp gets the fastest reply.
           </p>
-        </div>
-      </section>
 
-      <section className="bg-canvas-alt py-14">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
-            Prefer to chat?
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-slate-600">
-            Most customers find it easier to get a quote directly on WhatsApp
-            — we reply within 15 minutes.
-          </p>
-          <div className="mt-7">
-            <WhatsAppCTA label="Chat on WhatsApp instead" size="lg" />
-          </div>
-
-          <div className="mx-auto mt-8 flex max-w-md flex-col items-center gap-3 border-t border-line pt-8 text-sm text-slate-600 sm:flex-row sm:justify-center sm:gap-6">
-            <a href={BUSINESS.phoneTel} className="flex items-center gap-2 hover:text-gold-600">
-              <Phone size={16} />
-              {BUSINESS.phoneDisplay}
+          <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <WhatsAppCTA label="Chat on WhatsApp" size="lg" showPromise={false} />
+            <a
+              href={BUSINESS.phoneTel}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-300 px-8 py-4 text-base font-semibold text-navy-900 transition-colors hover:border-gold-500 hover:text-gold-600"
+            >
+              <Phone size={20} />
+              Call {BUSINESS.phoneDisplay}
             </a>
-            <a href={`mailto:${BUSINESS.email}`} className="flex items-center gap-2 hover:text-gold-600">
-              <Mail size={16} />
-              {BUSINESS.email}
+            <a
+              href={`mailto:${BUSINESS.email}`}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-300 px-8 py-4 text-base font-semibold text-navy-900 transition-colors hover:border-gold-500 hover:text-gold-600"
+            >
+              <Mail size={20} />
+              Email us
             </a>
           </div>
-        </div>
-      </section>
 
-      <section className="bg-canvas py-16">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="mb-10 text-center">
-            <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
-              Or request a booking below
+          <div className="mx-auto mt-12 max-w-xl rounded-2xl border border-line bg-white p-7 text-left shadow-sm">
+            <h2 className="font-display text-lg font-bold text-navy-900">
+              To get your fixed fare, send us:
             </h2>
-            <p className="mt-2 text-sm text-slate-500">
-              We'll confirm your booking within 2 hours via WhatsApp or email.
-            </p>
+            <ul className="mt-4 space-y-2.5">
+              {QUOTE_ITEMS.map((item) => (
+                <li key={item.label} className="flex items-center gap-2.5 text-sm text-slate-700">
+                  {item.emoji && <span aria-hidden="true">{item.emoji}</span>}
+                  {item.label}
+                </li>
+              ))}
+            </ul>
           </div>
-          <BookingForm />
         </div>
       </section>
     </>

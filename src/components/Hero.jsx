@@ -1,16 +1,27 @@
 import { Phone } from 'lucide-react'
 import { BUSINESS } from '../lib/constants'
 import WhatsAppCTA from './WhatsAppCTA'
-import HeroArt from './HeroArt'
+import heroImage from '../assets/images/hero-airport.jpg'
+
+const BADGES = ['From $89', 'Fixed fare', 'All tolls included', 'No surge pricing']
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-navy-900">
-      <div className="absolute inset-0">
-        <HeroArt />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-900/90 via-navy-900/70 to-navy-900" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/40 to-transparent" />
-      </div>
+      <img
+        src={heroImage}
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(to right, rgba(10,20,40,0.88) 0%, rgba(10,20,40,0.65) 60%, rgba(10,20,40,0.40) 100%)',
+        }}
+      />
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-start px-4 py-20 sm:px-6 sm:py-28 lg:py-36">
         <span className="mb-4 inline-block rounded-full border border-gold-400/40 bg-gold-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-gold-400">
@@ -22,6 +33,17 @@ export default function Hero() {
         <p className="mt-5 max-w-xl text-balance text-lg text-white/80 sm:text-xl">
           Fixed fares, all tolls included, no surge pricing — ever.
         </p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {BADGES.map((badge) => (
+            <span
+              key={badge}
+              className="rounded-full bg-gradient-to-r from-gold-300 to-gold-500 px-3.5 py-1 text-xs font-bold text-navy-900"
+            >
+              {badge}
+            </span>
+          ))}
+        </div>
 
         <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
           <WhatsAppCTA label="Book on WhatsApp" size="lg" theme="dark" />
