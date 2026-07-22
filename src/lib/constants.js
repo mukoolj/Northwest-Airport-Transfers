@@ -1,3 +1,7 @@
+import jeepImage from "../assets/images/jeep.jpg";
+import teslaImage from "../assets/images/tesla.jpg";
+import bydImage from "../assets/images/byd.jpg";
+
 export const BUSINESS = {
   name: "Northwest Airport Transfers",
   phoneDisplay: "0493 002 728",
@@ -83,7 +87,7 @@ export const FLEET = [
     name: "Jeep Grand Cherokee L",
     category: "Full-size 7-seat SUV",
     description: "Spacious, comfortable and family-ready, with room for the whole group plus every bag.",
-    image: null,
+    image: jeepImage,
     alt: "Jeep Grand Cherokee L 7 seat SUV airport transfer North West Sydney",
     filter: "brightness(0.9) contrast(1.05)",
   },
@@ -91,7 +95,7 @@ export const FLEET = [
     name: "Tesla Model Y",
     category: "Premium electric SUV",
     description: "A smooth, quiet, all-electric ride for business travellers and couples who want a premium arrival.",
-    image: null,
+    image: teslaImage,
     alt: "Tesla Model Y electric SUV airport transfer Sydney",
     filter: "none",
   },
@@ -99,7 +103,7 @@ export const FLEET = [
     name: "BYD Sealion 8",
     category: "Premium electric SUV",
     description: "Generous space and a refined electric drive, perfect for groups travelling in comfort.",
-    image: null,
+    image: bydImage,
     alt: "BYD Sealion 8 electric SUV airport transfer Sydney",
     filter: "brightness(0.9) contrast(1.05)",
   },
