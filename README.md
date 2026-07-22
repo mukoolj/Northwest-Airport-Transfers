@@ -41,8 +41,8 @@ npm run preview # serve the production build locally
 - `TaxiService` JSON-LD is injected on every page; `FAQPage` JSON-LD is added
   on the Pricing page (`src/lib/seo.js`).
 - `public/sitemap.xml` and `public/robots.txt` reference
-  `https://northwestairporttransfers.com.au` — **update both files with your
-  real production domain** once one is set up.
+  `https://northwestairporttransfers.vercel.app` — update both files if you
+  later move to a custom domain.
 
 ## Project structure
 
