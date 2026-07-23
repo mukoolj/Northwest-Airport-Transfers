@@ -19,12 +19,12 @@ export default function Pricing() {
         jsonLd={[taxiServiceJsonLd, faqJsonLd(FAQS)]}
       />
 
-      <section className="bg-canvas py-16">
+      <section className="bg-canvas py-10 md:py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <span className="inline-block rounded-full border border-gold-300 bg-gold-50 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-gold-600">
             Fixed-Fare Pricing
           </span>
-          <h1 className="mt-4 font-display text-4xl font-extrabold text-navy-900 sm:text-5xl">
+          <h1 className="mt-4 font-display text-3xl font-extrabold text-navy-900 md:text-5xl">
             Transparent pricing. No hidden fees.
           </h1>
           <p className="mt-4 text-slate-600">
@@ -39,7 +39,7 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="bg-canvas pb-16">
+      <section className="bg-canvas pb-10 md:pb-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <PricingCards detailed />
         </div>
@@ -49,21 +49,21 @@ export default function Pricing() {
 
       <HowItWorks />
 
-      <section className="bg-canvas-alt py-14">
+      <section className="bg-canvas-alt py-10 md:py-14">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <p className="font-display text-lg font-bold text-navy-900 sm:text-xl">
+          <p className="font-display text-base font-bold text-navy-900 md:text-xl">
             A standard sedan from 13cabs costs $108 from Parramatta. We charge
             $89 — in a premium 7-seat SUV with all tolls included.
           </p>
         </div>
       </section>
 
-      <section className="bg-canvas py-16">
+      <section className="bg-canvas py-10 md:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="text-center font-display text-2xl font-bold text-navy-900 sm:text-3xl">
+          <h2 className="text-center font-display text-xl font-bold text-navy-900 md:text-3xl">
             What counts as Standard vs Family/Group?
           </h2>
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:mt-8">
             <div className="rounded-2xl border border-line bg-white p-6 shadow-sm">
               <h3 className="font-display text-lg font-bold text-gold-600">Standard</h3>
               <p className="mt-2 text-sm text-slate-600">
@@ -85,15 +85,15 @@ export default function Pricing() {
 
       <Faq />
 
-      <section className="bg-canvas py-16 text-center">
+      <section className="bg-canvas py-10 text-center md:py-16">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
+          <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
             Not sure which region you're in?
           </h2>
           <p className="mt-3 text-slate-600">
             Message us your suburb on WhatsApp and we'll confirm your fixed fare in minutes.
           </p>
-          <div className="mt-7">
+          <div className="mt-6 md:mt-7">
             <WhatsAppCTA label="Get my fare on WhatsApp" size="lg" />
           </div>
         </div>

@@ -18,15 +18,15 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-canvas py-16">
+    <section className="bg-canvas py-10 md:py-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
+          <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
             How it works
           </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-6 md:mt-12 sm:grid-cols-3">
           {STEPS.map((s) => (
             <div
               key={s.step}

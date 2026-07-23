@@ -3,15 +3,15 @@ import { TESTIMONIALS } from '../lib/constants'
 
 export default function Testimonials() {
   return (
-    <section className="bg-canvas py-16">
+    <section className="bg-canvas py-10 md:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
+          <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
             What our customers say
           </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-3">
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}

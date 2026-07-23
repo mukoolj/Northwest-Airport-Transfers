@@ -2,15 +2,15 @@ import { COMPETITORS } from '../lib/constants'
 
 export default function CompetitorComparison() {
   return (
-    <section className="bg-canvas-alt py-16">
+    <section className="bg-canvas-alt py-10 md:py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <div className="text-center">
-          <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
+          <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
             Why pay more? See how we compare.
           </h2>
         </div>
 
-        <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-white shadow-sm">
+        <div className="mt-6 overflow-hidden rounded-2xl border border-line bg-white shadow-sm md:mt-10">
           <table className="w-full border-collapse text-left">
             <thead>
               <tr className="border-b border-line bg-canvas-alt">

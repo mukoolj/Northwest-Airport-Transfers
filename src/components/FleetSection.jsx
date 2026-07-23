@@ -3,16 +3,16 @@ import { FLEET } from '../lib/constants'
 
 export default function FleetSection() {
   return (
-    <section className="bg-canvas-alt py-16">
+    <section className="bg-canvas-alt py-10 md:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">Our Fleet</h2>
+          <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">Our Fleet</h2>
           <p className="mt-3 text-slate-600">
             A premium, well-maintained fleet suited to families, groups and business travel.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-6 md:mt-12 sm:grid-cols-3">
           {FLEET.map((v) => (
             <div
               key={v.name}
@@ -43,7 +43,7 @@ export default function FleetSection() {
           ))}
         </div>
 
-        <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-slate-500">
+        <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-slate-500 md:mt-8">
           Vehicle allocation depends on passenger numbers, luggage and availability. Confirmed at booking.
         </p>
       </div>

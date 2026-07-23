@@ -23,7 +23,7 @@ export default function IntroOfferBanner() {
         <span className="inline-block rounded-full bg-navy-900 px-4 py-1 text-xs font-bold uppercase tracking-wide text-gold-400">
           Introductory Offer
         </span>
-        <h2 className="mt-4 font-display text-3xl font-extrabold text-navy-900 sm:text-4xl">
+        <h2 className="mt-4 font-display text-2xl font-extrabold text-navy-900 md:text-4xl">
           Save up to $20 on every airport transfer
         </h2>
         <p className="mt-2 text-navy-900/80">
@@ -31,7 +31,7 @@ export default function IntroOfferBanner() {
         </p>
 
         {!expired ? (
-          <div className="mt-7 flex items-center justify-center gap-3 sm:gap-4">
+          <div className="mt-6 flex items-center justify-center gap-3 sm:gap-4 md:mt-7">
             <TimeBlock value={days} label="Days" />
             <TimeBlock value={hours} label="Hours" />
             <TimeBlock value={minutes} label="Mins" />

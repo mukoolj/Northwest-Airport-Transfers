@@ -30,20 +30,20 @@ export default function Home() {
 
       <IntroOfferBanner />
 
-      <section className="bg-canvas py-16">
+      <section className="bg-canvas py-10 md:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
+            <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
               Fixed-fare pricing by region
             </h2>
             <p className="mt-3 text-slate-600">
               Introductory pricing valid until 31 December 2026. All tolls included, no hidden fees.
             </p>
           </div>
-          <div className="mt-12">
+          <div className="mt-6 md:mt-12">
             <PricingCards />
           </div>
-          <div className="mt-8 text-center">
+          <div className="mt-6 text-center md:mt-8">
             <Link
               to="/pricing"
               className="text-sm font-semibold text-gold-600 underline-offset-4 hover:underline"
@@ -67,15 +67,15 @@ export default function Home() {
       <WhyChooseUs />
       <PricingCallout />
 
-      <section className="bg-canvas-alt py-16 text-center">
+      <section className="bg-canvas-alt py-10 text-center md:py-16">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
+          <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
             Ready to book your transfer?
           </h2>
           <p className="mt-3 text-slate-600">
             Message us on WhatsApp for a fixed quote — we reply within 15 minutes.
           </p>
-          <div className="mt-7 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:mt-7">
             <WhatsAppCTA label="Book on WhatsApp" size="lg" showPromise={false} />
             <Link
               to="/contact"

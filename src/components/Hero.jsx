@@ -27,7 +27,7 @@ export default function Hero() {
         <span className="mb-4 inline-block rounded-full border border-gold-400/40 bg-gold-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-gold-400">
           Fixed-Fare Airport Transfers
         </span>
-        <h1 className="text-balance max-w-2xl font-display text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+        <h1 className="text-balance max-w-2xl font-display text-3xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
           Stress-Free Airport Transfers Across North West Sydney
         </h1>
         <p className="mt-5 max-w-xl text-balance text-lg text-white/80 sm:text-xl">

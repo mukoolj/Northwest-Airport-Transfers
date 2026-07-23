@@ -12,10 +12,10 @@ const REASONS = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-canvas-alt py-16">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-2 md:items-center">
+    <section className="bg-canvas-alt py-10 md:py-16">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-2 md:items-center md:gap-10">
         <div>
-          <h2 className="font-display text-3xl font-bold text-navy-900 sm:text-4xl">
+          <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
             Why choose Northwest Airport Transfers
           </h2>
           <p className="mt-4 text-slate-600">
@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
             airport transfers should be simple, reliable and stress-free —
             every time.
           </p>
-          <div className="mt-8">
+          <div className="mt-6 md:mt-8">
             <WhatsAppCTA label="Chat with us on WhatsApp" showPromise={false} />
           </div>
         </div>
