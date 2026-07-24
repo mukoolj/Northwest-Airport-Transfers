@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Phone, MessageCircle, Mail, MapPin } from 'lucide-react'
-import { BUSINESS, whatsappLink } from '../lib/constants'
+import { BUSINESS, whatsappLink, SOCIAL_LINKS } from '../lib/constants'
+import { FacebookIcon, InstagramIcon } from './SocialIcons'
 
 export default function Footer() {
   return (
@@ -64,8 +65,32 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-line px-4 py-5 text-center text-xs text-slate-500 sm:px-6">
-        © 2026 {BUSINESS.name}. All rights reserved.
+      <div className="border-t border-line px-4 py-6 text-center sm:px-6">
+        <p className="text-xs font-semibold uppercase tracking-wide text-gold-600">Follow us</p>
+        <div className="mt-3 flex justify-center gap-3">
+          <a
+            href={SOCIAL_LINKS.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow us on Facebook"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-transparent bg-navy-900 text-gold-400 transition-colors hover:border-gold-400"
+          >
+            <FacebookIcon className="h-5 w-5" />
+          </a>
+          <a
+            href={SOCIAL_LINKS.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow us on Instagram"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-transparent bg-navy-900 text-gold-400 transition-colors hover:border-gold-400"
+          >
+            <InstagramIcon className="h-5 w-5" />
+          </a>
+        </div>
+
+        <p className="mt-6 text-xs text-slate-500">
+          © 2026 {BUSINESS.name}. All rights reserved.
+        </p>
       </div>
     </footer>
   )

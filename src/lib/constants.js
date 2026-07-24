@@ -19,13 +19,14 @@ export function whatsappLink(message) {
   return `https://wa.me/${BUSINESS.whatsappNumber}?text=${text}`;
 }
 
-// Regions: id, label, standard price (was/now), family price (was/now), suburbs
+// Regions: id, label, standard/family/group prices (was/now), suburbs
 export const REGIONS = [
   {
     id: "parramatta",
     label: "Parramatta Region",
     standard: { was: 99, now: 89 },
     family: { was: 120, now: 100 },
+    group: { was: 198, now: 168 },
     suburbs: [
       "Parramatta", "Westmead", "Merrylands", "Guildford", "Wentworthville",
       "Toongabbie", "Pendle Hill", "Auburn", "Lidcombe", "Strathfield",
@@ -37,6 +38,7 @@ export const REGIONS = [
     label: "Blacktown Region",
     standard: { was: 110, now: 100 },
     family: { was: 130, now: 110 },
+    group: { was: 220, now: 190 },
     suburbs: ["Blacktown", "Seven Hills", "Kings Langley"],
   },
   {
@@ -44,6 +46,7 @@ export const REGIONS = [
     label: "Ryde Region",
     standard: { was: 120, now: 110 },
     family: { was: 140, now: 120 },
+    group: { was: 240, now: 210 },
     suburbs: ["Ryde", "Epping", "Marsfield", "North Ryde", "Meadowbank"],
   },
   {
@@ -51,6 +54,7 @@ export const REGIONS = [
     label: "Hills District",
     standard: { was: 130, now: 120 },
     family: { was: 155, now: 135 },
+    group: { was: 260, now: 230 },
     suburbs: [
       "Castle Hill", "Baulkham Hills", "Winston Hills", "Norwest",
       "Bella Vista", "Carlingford", "Pennant Hills", "Cherrybrook",
@@ -61,6 +65,7 @@ export const REGIONS = [
     label: "Stanhope / Kellyville",
     standard: { was: 130, now: 120 },
     family: { was: 165, now: 145 },
+    group: { was: 260, now: 230 },
     suburbs: [
       "Stanhope Gardens", "The Ponds", "Glenwood", "Kellyville", "Colebee",
       "Marsden Park", "Quakers Hill", "Parklea", "Kellyville Ridge",
@@ -71,6 +76,7 @@ export const REGIONS = [
     label: "Rouse Hill / Box Hill",
     standard: { was: 150, now: 140 },
     family: { was: 175, now: 155 },
+    group: { was: 300, now: 270 },
     suburbs: ["Rouse Hill", "Box Hill", "Dural"],
   },
   {
@@ -78,9 +84,36 @@ export const REGIONS = [
     label: "Gables / Oakville / Middle Dural",
     standard: { was: 160, now: 150 },
     family: { was: 190, now: 170 },
+    group: { was: 320, now: 290 },
     suburbs: ["The Gables", "Oakville", "Middle Dural"],
   },
 ];
+
+export const FARE_CATEGORIES = [
+  {
+    id: "standard",
+    title: "Standard",
+    icon: "luggage",
+    desc: "1–4 passengers · Up to 3 bags · No child seats · No pram",
+  },
+  {
+    id: "family",
+    title: "Family",
+    icon: "baby",
+    desc: "1–4 passengers · Child seats available · Up to 4 large + 4 small bags · With pram: max 5 bags total",
+  },
+  {
+    id: "group",
+    title: "Group",
+    icon: "users",
+    desc: "5–7 passengers · Two SUVs travelling together · Subject to availability",
+  },
+];
+
+export const SOCIAL_LINKS = {
+  facebook: "https://www.facebook.com/profile.php?id=61591959269650",
+  instagram: "https://www.instagram.com/northwestairporttransfers?igsh=MXRqbGptMDdmcHF2ZQ==",
+};
 
 export const FLEET = [
   {
@@ -127,8 +160,8 @@ export const FAQS = [
     a: "We track your flight in real time and adjust our arrival. No waiting charges for flight delays.",
   },
   {
-    q: "What counts as Family/Group fare?",
-    a: "Child seats, 4 or more bags, a pram, or 5 or more passengers.",
+    q: "What's the difference between Standard, Family and Group?",
+    a: "Standard is 1–4 passengers with up to 3 bags and no child seats. Family is 1–4 passengers needing child seats and/or extra luggage (up to 4 large + 4 small bags, or 5 bags total with a pram). Group is 5–7 passengers, travelling in two SUVs together, subject to availability.",
   },
   {
     q: "Are there surcharges for early morning or late night?",

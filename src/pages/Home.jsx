@@ -7,7 +7,9 @@ import CompetitorComparison from '../components/CompetitorComparison'
 import FleetSection from '../components/FleetSection'
 import Testimonials from '../components/Testimonials'
 import WhyChooseUs from '../components/WhyChooseUs'
-import PricingCards from '../components/PricingCards'
+import FareCategoryCards from '../components/FareCategoryCards'
+import PricingTable from '../components/PricingTable'
+import PricingActions from '../components/PricingActions'
 import WhatsAppNudge from '../components/WhatsAppNudge'
 import PricingCallout from '../components/PricingCallout'
 import WhatsAppCTA from '../components/WhatsAppCTA'
@@ -40,8 +42,10 @@ export default function Home() {
               Introductory pricing valid until 31 December 2026. All tolls included, no hidden fees.
             </p>
           </div>
-          <div className="mt-6 md:mt-12">
-            <PricingCards />
+          <div className="mt-6 space-y-6 md:mt-12">
+            <FareCategoryCards />
+            <PricingTable />
+            <PricingActions />
           </div>
           <div className="mt-6 text-center md:mt-8">
             <Link

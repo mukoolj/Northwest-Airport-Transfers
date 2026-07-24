@@ -1,16 +1,16 @@
-import PricingCards from '../components/PricingCards'
 import WhatsAppNudge from '../components/WhatsAppNudge'
 import WhatsAppCTA from '../components/WhatsAppCTA'
 import HowItWorks from '../components/HowItWorks'
 import Faq from '../components/Faq'
 import Seo from '../components/Seo'
-import { useCountdown } from '../hooks/useCountdown'
-import { BUSINESS, FAQS } from '../lib/constants'
+import FareCategoryCards from '../components/FareCategoryCards'
+import PricingTable from '../components/PricingTable'
+import PricingActions from '../components/PricingActions'
+import SuburbAccordion from '../components/SuburbAccordion'
+import { FAQS } from '../lib/constants'
 import { taxiServiceJsonLd, faqJsonLd } from '../lib/seo'
 
 export default function Pricing() {
-  const { days, expired } = useCountdown(BUSINESS.offerEndDate)
-
   return (
     <>
       <Seo
@@ -28,20 +28,19 @@ export default function Pricing() {
             Transparent pricing. No hidden fees.
           </h1>
           <p className="mt-4 text-slate-600">
-            Every fare includes all tolls, door-to-door service and direct
-            communication with your driver. What we quote is what you pay.
+            Every fare is fixed and confirmed before your trip — all tolls
+            included, no surge pricing, ever. Introductory pricing valid till
+            31 December 2026.
           </p>
-          {!expired && (
-            <p className="mt-2 text-sm font-semibold text-gold-600">
-              Introductory pricing ends in {days} {days === 1 ? 'day' : 'days'} — locked in until 31 December 2026
-            </p>
-          )}
         </div>
       </section>
 
       <section className="bg-canvas pb-10 md:pb-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <PricingCards detailed />
+        <div className="mx-auto max-w-6xl space-y-8 px-4 sm:px-6">
+          <FareCategoryCards />
+          <PricingTable />
+          <PricingActions />
+          <SuburbAccordion />
         </div>
       </section>
 
@@ -54,31 +53,6 @@ export default function Pricing() {
           <p className="font-display text-base font-bold text-navy-900 md:text-xl">
             A standard sedan from 13cabs costs $108 from Parramatta. We charge
             $89 — in a premium 7-seat SUV with all tolls included.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-canvas py-10 md:py-16">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="text-center font-display text-xl font-bold text-navy-900 md:text-3xl">
-            What counts as Standard vs Family/Group?
-          </h2>
-          <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:mt-8">
-            <div className="rounded-2xl border border-line bg-white p-6 shadow-sm">
-              <h3 className="font-display text-lg font-bold text-gold-600">Standard</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                1–4 passengers, up to 3 bags, no child seats required.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-line bg-white p-6 shadow-sm">
-              <h3 className="font-display text-lg font-bold text-gold-600">Family / Group</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Child seats, 4+ bags, a pram, or 5+ passengers.
-              </p>
-            </div>
-          </div>
-          <p className="mt-6 text-center text-sm text-slate-500">
-            Not sure which applies to you? Send us your trip details on WhatsApp and we'll confirm your fare.
           </p>
         </div>
       </section>
