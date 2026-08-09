@@ -10,7 +10,10 @@ export default function TopAnnouncementBar() {
   return (
     <div className="bg-gradient-to-r from-gold-300 to-gold-500 py-2 text-center text-navy-900">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-2 gap-y-0.5 px-4 text-xs font-semibold sm:text-sm">
-        <span>Introductory Offer — save up to $10 on every transfer.</span>
+        <span>Introductory Offer — save</span>
+        <span className="animate-banner-flash font-extrabold">
+          $10 Standard · $15 Family · $20 Group
+        </span>
         <span className="font-extrabold">
           {days} {days === 1 ? 'day' : 'days'} left.
         </span>

@@ -1,6 +1,12 @@
 import { useCountdown } from '../hooks/useCountdown'
 import { BUSINESS } from '../lib/constants'
 
+const DISCOUNTS = [
+  { label: 'Standard', amount: 10 },
+  { label: 'Family', amount: 15 },
+  { label: 'Group', amount: 20 },
+]
+
 function TimeBlock({ value, label }) {
   return (
     <div className="flex flex-col items-center rounded-xl bg-navy-900/90 px-4 py-3 sm:px-6 sm:py-4">
@@ -24,11 +30,22 @@ export default function IntroOfferBanner() {
           Introductory Offer
         </span>
         <h2 className="mt-4 font-display text-2xl font-extrabold text-navy-900 md:text-4xl">
-          Save up to $10 on every airport transfer
+          Save on every airport transfer
         </h2>
         <p className="mt-2 text-navy-900/80">
           Locked-in introductory pricing, valid until 31 December 2026
         </p>
+
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5">
+          {DISCOUNTS.map((d) => (
+            <span
+              key={d.label}
+              className="animate-sticker-flash rounded-full bg-navy-900 px-4 py-1.5 text-sm font-extrabold text-gold-400 shadow-md"
+            >
+              ${d.amount} off {d.label}
+            </span>
+          ))}
+        </div>
 
         {!expired ? (
           <div className="mt-6 flex items-center justify-center gap-3 sm:gap-4 md:mt-7">

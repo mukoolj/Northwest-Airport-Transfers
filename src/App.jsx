@@ -21,8 +21,10 @@ function App() {
   return (
     <div className="flex min-h-screen flex-col bg-canvas">
       <ScrollToTop />
-      <TopAnnouncementBar />
-      <Navbar />
+      <div className="sticky top-0 z-40">
+        <TopAnnouncementBar />
+        <Navbar />
+      </div>
       <main className="flex-1 pb-16 md:pb-0">
         <Routes>
           <Route path="/" element={<Home />} />
