@@ -1,16 +1,17 @@
 import { COMPETITORS } from '../lib/constants'
+import Reveal from './Reveal'
 
 export default function CompetitorComparison() {
   return (
     <section className="bg-canvas-alt py-10 md:py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <div className="text-center">
+        <Reveal className="text-center">
           <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
             Why pay more? See how we compare.
           </h2>
-        </div>
+        </Reveal>
 
-        <div className="mt-6 overflow-hidden rounded-2xl border border-line bg-white shadow-sm md:mt-10">
+        <Reveal delay={100} className="mt-6 overflow-hidden rounded-2xl border border-line bg-white shadow-sm md:mt-10">
           <table className="w-full border-collapse text-left">
             <thead>
               <tr className="border-b border-line bg-canvas-alt">
@@ -22,7 +23,9 @@ export default function CompetitorComparison() {
               {COMPETITORS.map((row) => (
                 <tr
                   key={row.service}
-                  className={`border-b border-line last:border-b-0 ${row.highlight ? 'bg-gold-50' : ''}`}
+                  className={`border-b border-line transition-colors last:border-b-0 hover:bg-gold-50/60 ${
+                    row.highlight ? 'bg-gold-50' : ''
+                  }`}
                 >
                   <td
                     className={`px-5 py-4 text-sm ${
@@ -42,7 +45,7 @@ export default function CompetitorComparison() {
               ))}
             </tbody>
           </table>
-        </div>
+        </Reveal>
 
         <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-slate-500">
           Unlike rideshare apps, our price is fixed and confirmed before you book —

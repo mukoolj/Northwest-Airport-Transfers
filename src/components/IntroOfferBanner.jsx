@@ -24,7 +24,7 @@ export default function IntroOfferBanner() {
           Introductory Offer
         </span>
         <h2 className="mt-4 font-display text-2xl font-extrabold text-navy-900 md:text-4xl">
-          Save up to $20 on every airport transfer
+          Save up to $10 on every airport transfer
         </h2>
         <p className="mt-2 text-navy-900/80">
           Locked-in introductory pricing, valid until 31 December 2026

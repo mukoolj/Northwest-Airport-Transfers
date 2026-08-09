@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
-import QuickQuote from '../components/QuickQuote'
+import FareCalculator from '../components/FareCalculator'
 import IntroOfferBanner from '../components/IntroOfferBanner'
 import KeyFeatures from '../components/KeyFeatures'
 import CompetitorComparison from '../components/CompetitorComparison'
@@ -14,6 +14,7 @@ import AirportPickupNote from '../components/AirportPickupNote'
 import WhatsAppNudge from '../components/WhatsAppNudge'
 import PricingCallout from '../components/PricingCallout'
 import WhatsAppCTA from '../components/WhatsAppCTA'
+import Reveal from '../components/Reveal'
 import Seo from '../components/Seo'
 import { taxiServiceJsonLd } from '../lib/seo'
 
@@ -28,27 +29,32 @@ export default function Home() {
 
       <Hero />
 
-      <QuickQuote />
-      <PricingCallout />
+      <div className="relative bg-canvas pb-10 pt-0 md:pb-16">
+        <FareCalculator />
+      </div>
 
       <IntroOfferBanner />
 
-      <section className="bg-canvas py-10 md:py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="mx-auto max-w-2xl text-center">
+      <section className="relative overflow-hidden bg-canvas py-10 md:py-16">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-gold-300/20 blur-3xl"
+        />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+          <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
               Fixed-fare pricing by region
             </h2>
             <p className="mt-3 text-slate-600">
               Introductory pricing valid until 31 December 2026. All tolls included, no hidden fees.
             </p>
-          </div>
-          <div className="mt-6 space-y-6 md:mt-12">
+          </Reveal>
+          <Reveal delay={100} className="mt-6 space-y-6 md:mt-12">
             <FareCategoryCards />
             <AirportPickupNote />
             <PricingTable />
             <PricingActions />
-          </div>
+          </Reveal>
           <div className="mt-6 text-center md:mt-8">
             <Link
               to="/pricing"
@@ -73,8 +79,12 @@ export default function Home() {
       <WhyChooseUs />
       <PricingCallout />
 
-      <section className="bg-canvas-alt py-10 text-center md:py-16">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+      <section className="relative overflow-hidden bg-canvas-alt py-10 text-center md:py-16">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-0 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-gold-300/25 blur-3xl"
+        />
+        <Reveal className="relative mx-auto max-w-2xl px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
             Ready to book your transfer?
           </h2>
@@ -90,7 +100,7 @@ export default function Home() {
               Other ways to reach us
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   )

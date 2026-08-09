@@ -11,7 +11,7 @@ export default function FareCategoryCards() {
         return (
           <div
             key={cat.id}
-            className="relative rounded-2xl border border-gold-400/25 bg-navy-900 p-6 text-center sm:text-left"
+            className="relative rounded-2xl border border-gold-400/25 bg-navy-900 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-gold-400 hover:shadow-lg hover:shadow-gold-400/10 sm:text-left"
           >
             {cat.badge && (
               <span className="animate-sticker-flash absolute -top-3 right-4 rounded-full bg-gradient-to-r from-gold-300 to-gold-500 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-navy-900 shadow-md">

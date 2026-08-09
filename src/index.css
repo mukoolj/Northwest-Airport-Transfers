@@ -86,3 +86,22 @@ h1, h2, h3, h4 {
 .animate-banner-flash {
   animation: banner-flash 1.6s ease-in-out infinite;
 }
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-glow,
+  .animate-sticker-flash,
+  .animate-banner-flash,
+  .animate-fade-in-up {
+    animation: none !important;
+    transition: none !important;
+  }
+}
