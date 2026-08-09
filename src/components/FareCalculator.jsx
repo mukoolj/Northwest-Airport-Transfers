@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { MapPin, PlaneLanding, ChevronDown } from 'lucide-react'
-import { REGIONS, AIRPORT_PICKUP_SURCHARGE } from '../lib/constants'
+import { REGIONS, FARE_CATEGORIES, AIRPORT_PICKUP_SURCHARGE } from '../lib/constants'
 import { TERMINALS, getRegionBySuburb } from '../lib/pricing'
 import WhatsAppCTA from './WhatsAppCTA'
 
@@ -87,20 +87,15 @@ export default function FareCalculator() {
               {region.label} → Sydney Airport {terminal}
             </p>
             <div className="mt-4 grid grid-cols-3 gap-3 text-center">
-              <div>
-                <p className="text-[11px] font-semibold uppercase text-slate-500">Standard</p>
-                <p className="mt-1 font-display text-xl font-extrabold text-navy-900">${region.standard.now}</p>
-              </div>
-              <div>
-                <p className="text-[11px] font-semibold uppercase text-slate-500">Family</p>
-                <p className="mt-1 font-display text-xl font-extrabold text-navy-900">${region.family.now}</p>
-              </div>
-              <div>
-                <p className="text-[11px] font-semibold uppercase text-slate-500">Group</p>
-                <p className="mt-1 font-display text-xl font-extrabold text-navy-900">${region.group.now}</p>
-              </div>
+              {FARE_CATEGORIES.map((cat) => (
+                <div key={cat.id}>
+                  <p className="text-[11px] font-semibold uppercase text-slate-500">{cat.title}</p>
+                  <p className="mt-1 font-display text-xl font-extrabold text-navy-900">${region[cat.id].now}</p>
+                  <p className="mt-1 text-[10px] leading-snug text-slate-500">{cat.shortDesc}</p>
+                </div>
+              ))}
             </div>
-            <p className="mt-3 text-center text-xs text-slate-500">
+            <p className="mt-4 text-center text-xs text-slate-500">
               Drop-off fare shown — fixed, all tolls included. Airport pickup (arrival) adds ${AIRPORT_PICKUP_SURCHARGE}.
             </p>
             <div className="mt-4 flex justify-center">

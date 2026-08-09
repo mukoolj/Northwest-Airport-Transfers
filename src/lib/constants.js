@@ -107,6 +107,7 @@ export const FARE_CATEGORIES = [
     title: "Standard",
     icon: "luggage",
     desc: "1–4 passengers · Up to 3 bags · No child seats · No pram",
+    shortDesc: "1–4 pax · Up to 3 bags · No child seats",
     badge: "Best Value",
   },
   {
@@ -114,6 +115,7 @@ export const FARE_CATEGORIES = [
     title: "Family",
     icon: "baby",
     desc: "1–4 passengers · Child seats available · Up to 4 large + 4 small bags · With pram: max 5 bags total",
+    shortDesc: "1–4 pax · Child seats · Extra bags/pram",
     badge: "Most Popular",
   },
   {
@@ -121,6 +123,7 @@ export const FARE_CATEGORIES = [
     title: "Group",
     icon: "users",
     desc: "5–7 passengers · Two SUVs travelling together · Subject to availability",
+    shortDesc: "5–7 pax · 2 vehicles together",
     badge: "New",
   },
 ];
