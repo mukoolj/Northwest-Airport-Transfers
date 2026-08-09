@@ -7,6 +7,7 @@ import FareCategoryCards from '../components/FareCategoryCards'
 import PricingTable from '../components/PricingTable'
 import PricingActions from '../components/PricingActions'
 import SuburbAccordion from '../components/SuburbAccordion'
+import AirportPickupNote from '../components/AirportPickupNote'
 import { FAQS } from '../lib/constants'
 import { taxiServiceJsonLd, faqJsonLd } from '../lib/seo'
 
@@ -38,6 +39,7 @@ export default function Pricing() {
       <section className="bg-canvas pb-10 md:pb-16">
         <div className="mx-auto max-w-6xl space-y-8 px-4 sm:px-6">
           <FareCategoryCards />
+          <AirportPickupNote />
           <PricingTable />
           <PricingActions />
           <SuburbAccordion />

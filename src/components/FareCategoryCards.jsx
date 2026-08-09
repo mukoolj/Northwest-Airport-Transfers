@@ -11,8 +11,13 @@ export default function FareCategoryCards() {
         return (
           <div
             key={cat.id}
-            className="rounded-2xl border border-gold-400/25 bg-navy-900 p-6 text-center sm:text-left"
+            className="relative rounded-2xl border border-gold-400/25 bg-navy-900 p-6 text-center sm:text-left"
           >
+            {cat.badge && (
+              <span className="animate-sticker-flash absolute -top-3 right-4 rounded-full bg-gradient-to-r from-gold-300 to-gold-500 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-navy-900 shadow-md">
+                {cat.badge}
+              </span>
+            )}
             <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl bg-gold-400/10 text-gold-400 sm:mx-0">
               <Icon size={22} />
             </div>

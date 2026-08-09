@@ -23,71 +23,83 @@ export function whatsappLink(message) {
 export const REGIONS = [
   {
     id: "parramatta",
-    label: "Parramatta Region",
+    label: "Parramatta / Ryde",
     standard: { was: 99, now: 89 },
-    family: { was: 120, now: 100 },
-    group: { was: 198, now: 168 },
+    family: { was: 120, now: 110 },
+    group: { was: 198, now: 178 },
     suburbs: [
-      "Parramatta", "Westmead", "Merrylands", "Guildford", "Wentworthville",
-      "Toongabbie", "Pendle Hill", "Auburn", "Lidcombe", "Strathfield",
-      "Burwood", "Homebush", "Rhodes",
+      "Parramatta", "Merrylands", "Guildford", "Auburn", "Lidcombe",
+      "Strathfield", "Burwood", "Homebush", "Rhodes", "Ryde", "Epping",
+      "Eastwood", "Marsfield", "North Ryde", "Meadowbank",
     ],
   },
   {
     id: "blacktown",
     label: "Blacktown Region",
     standard: { was: 110, now: 100 },
-    family: { was: 130, now: 110 },
-    group: { was: 220, now: 190 },
-    suburbs: ["Blacktown", "Seven Hills", "Kings Langley"],
-  },
-  {
-    id: "ryde",
-    label: "Ryde Region",
-    standard: { was: 120, now: 110 },
-    family: { was: 140, now: 120 },
-    group: { was: 240, now: 210 },
-    suburbs: ["Ryde", "Epping", "Marsfield", "North Ryde", "Meadowbank"],
+    family: { was: 135, now: 125 },
+    group: { was: 220, now: 200 },
+    suburbs: ["Blacktown", "Seven Hills", "Wentworthville", "Toongabbie", "Pendle Hill", "Kings Langley"],
   },
   {
     id: "hills",
     label: "Hills District",
-    standard: { was: 130, now: 120 },
-    family: { was: 155, now: 135 },
-    group: { was: 260, now: 230 },
+    standard: { was: 120, now: 110 },
+    family: { was: 150, now: 140 },
+    group: { was: 240, now: 220 },
     suburbs: [
-      "Castle Hill", "Baulkham Hills", "Winston Hills", "Norwest",
-      "Bella Vista", "Carlingford", "Pennant Hills", "Cherrybrook",
+      "Baulkham Hills", "Castle Hill", "Norwest", "Bella Vista",
+      "Winston Hills", "Carlingford", "Pennant Hills", "Cherrybrook",
     ],
   },
   {
     id: "stanhope",
     label: "Stanhope / Kellyville",
     standard: { was: 130, now: 120 },
-    family: { was: 165, now: 145 },
-    group: { was: 260, now: 230 },
+    family: { was: 165, now: 155 },
+    group: { was: 260, now: 240 },
     suburbs: [
-      "Stanhope Gardens", "The Ponds", "Glenwood", "Kellyville", "Colebee",
-      "Marsden Park", "Quakers Hill", "Parklea", "Kellyville Ridge",
+      "Stanhope Gardens", "Kellyville", "The Ponds", "Quakers Hill",
+      "Glenwood", "Parklea", "Kellyville Ridge",
     ],
   },
   {
-    id: "rousehill",
-    label: "Rouse Hill / Box Hill",
-    standard: { was: 150, now: 140 },
-    family: { was: 175, now: 155 },
-    group: { was: 300, now: 270 },
-    suburbs: ["Rouse Hill", "Box Hill", "Dural"],
+    id: "marsdenpark",
+    label: "Marsden Park / Schofields",
+    standard: { was: 135, now: 125 },
+    family: { was: 170, now: 160 },
+    group: { was: 275, now: 255 },
+    suburbs: ["Marsden Park", "Schofields"],
   },
   {
-    id: "gables",
-    label: "Gables / Oakville / Middle Dural",
+    id: "rousehill",
+    label: "Rouse Hill / Dural",
+    standard: { was: 145, now: 135 },
+    family: { was: 180, now: 170 },
+    group: { was: 290, now: 270 },
+    suburbs: ["Rouse Hill", "Dural"],
+  },
+  {
+    id: "boxhill",
+    label: "Box Hill / Grantham Farm / Riverstone / Gables",
+    standard: { was: 150, now: 140 },
+    family: { was: 185, now: 175 },
+    group: { was: 300, now: 280 },
+    suburbs: ["Box Hill", "Grantham Farm", "Riverstone", "The Gables"],
+  },
+  {
+    id: "oakville",
+    label: "Oakville / Middle Dural",
     standard: { was: 160, now: 150 },
-    family: { was: 190, now: 170 },
-    group: { was: 320, now: 290 },
-    suburbs: ["The Gables", "Oakville", "Middle Dural"],
+    family: { was: 195, now: 185 },
+    group: { was: 320, now: 300 },
+    suburbs: ["Oakville", "Middle Dural"],
   },
 ];
+
+// Airport pickups (arrivals) cost more than drop-offs due to airport
+// queuing/pickup fees — flagged prominently near the pricing table.
+export const AIRPORT_PICKUP_SURCHARGE = 15;
 
 export const FARE_CATEGORIES = [
   {
@@ -95,18 +107,21 @@ export const FARE_CATEGORIES = [
     title: "Standard",
     icon: "luggage",
     desc: "1–4 passengers · Up to 3 bags · No child seats · No pram",
+    badge: "Best Value",
   },
   {
     id: "family",
     title: "Family",
     icon: "baby",
     desc: "1–4 passengers · Child seats available · Up to 4 large + 4 small bags · With pram: max 5 bags total",
+    badge: "Most Popular",
   },
   {
     id: "group",
     title: "Group",
     icon: "users",
     desc: "5–7 passengers · Two SUVs travelling together · Subject to availability",
+    badge: "New",
   },
 ];
 
@@ -189,17 +204,17 @@ export const FEATURES = [
 export const TESTIMONIALS = [
   {
     quote: "Punctual, professional and the car was immaculate. Had our child seat fitted perfectly and we didn't have to worry about a thing.",
-    name: "Sarah M.",
+    name: "Y.S.",
     suburb: "Castle Hill",
   },
   {
     quote: "Fixed price meant no nasty surprises. Tracked our flight and was waiting when we landed. Will use every time.",
-    name: "James T.",
+    name: "Anushreya",
     suburb: "Norwest",
   },
   {
     quote: "Best airport transfer we've used. The Jeep was spotless and our driver was so helpful with the luggage.",
-    name: "Priya K.",
+    name: "Robert",
     suburb: "Stanhope Gardens",
   },
 ];

@@ -10,6 +10,7 @@ import WhyChooseUs from '../components/WhyChooseUs'
 import FareCategoryCards from '../components/FareCategoryCards'
 import PricingTable from '../components/PricingTable'
 import PricingActions from '../components/PricingActions'
+import AirportPickupNote from '../components/AirportPickupNote'
 import WhatsAppNudge from '../components/WhatsAppNudge'
 import PricingCallout from '../components/PricingCallout'
 import WhatsAppCTA from '../components/WhatsAppCTA'
@@ -44,6 +45,7 @@ export default function Home() {
           </div>
           <div className="mt-6 space-y-6 md:mt-12">
             <FareCategoryCards />
+            <AirportPickupNote />
             <PricingTable />
             <PricingActions />
           </div>
