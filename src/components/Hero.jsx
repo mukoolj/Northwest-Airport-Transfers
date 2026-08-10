@@ -32,14 +32,14 @@ export default function Hero() {
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-start px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
         <h1 className="text-balance max-w-xl font-display text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
-          Private Sydney Airport Transfers from $99
+          Private Sydney Airport Transfers from $89
         </h1>
         <p className="mt-4 max-w-lg text-balance text-base text-white/85 sm:text-lg">
           Comfortable, reliable airport transfers for families, groups and
           business travellers across North-West and Western Sydney.
         </p>
         <p className="mt-4 max-w-lg text-sm font-medium text-gold-300 sm:text-base">
-          Fixed fares · Tolls included · Child seats available · No surge pricing
+          Introductory offer · Fixed fares · Tolls included · Child seats available
         </p>
 
         <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">

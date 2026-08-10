@@ -149,7 +149,14 @@ export const FLEET = [
   {
     name: "Jeep Grand Cherokee L",
     category: "Full-size 7-seat SUV",
+    badge: "Best for families & luggage",
     description: "Spacious, comfortable and family-ready, with room for the whole group plus every bag.",
+    points: [
+      "Families and groups",
+      "Large luggage requirements",
+      "Prams",
+      "Maximum passenger & luggage flexibility",
+    ],
     image: jeepImage,
     alt: "Jeep Grand Cherokee L 7 seat SUV airport transfer North West Sydney",
     filter: "brightness(0.9) contrast(1.05)",
@@ -157,7 +164,13 @@ export const FLEET = [
   {
     name: "Tesla Model Y",
     category: "Premium electric SUV",
+    badge: "Quiet & modern",
     description: "A smooth, quiet, all-electric ride for business travellers and couples who want a premium arrival.",
+    points: [
+      "Quiet, modern cabin",
+      "Individuals, couples & smaller groups",
+      "Premium EV experience",
+    ],
     image: teslaImage,
     alt: "Tesla Model Y electric SUV airport transfer Sydney",
     filter: "none",
@@ -165,12 +178,24 @@ export const FLEET = [
   {
     name: "BYD Sealion 8",
     category: "Premium electric SUV",
+    badge: "Premium space & comfort",
     description: "Generous space and a refined electric drive, perfect for groups travelling in comfort.",
+    points: [
+      "Spacious, refined cabin",
+      "Good luggage flexibility",
+      "Families and groups",
+      "Premium comfort",
+    ],
     image: bydImage,
     alt: "BYD Sealion 8 electric SUV airport transfer Sydney",
     filter: "brightness(0.9) contrast(1.05)",
   },
 ];
+
+// Exact disclaimer required near the fleet — never imply a specific
+// vehicle is guaranteed ahead of booking confirmation.
+export const FLEET_AVAILABILITY_NOTE =
+  "All vehicles are subject to availability. Your vehicle will be confirmed at the time of booking.";
 
 // Same-route fare comparison shown on the homepage (Parramatta benchmark)
 export const COMPETITORS = [

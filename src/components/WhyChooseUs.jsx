@@ -3,12 +3,11 @@ import WhatsAppCTA from './WhatsAppCTA'
 import Reveal from './Reveal'
 
 const REASONS = [
-  'Locally owned and operated — North West Sydney specialists',
-  'Professional, fully vetted drivers',
-  'Clean, modern vehicles on every trip',
-  'Direct, real-time communication via WhatsApp',
-  'Transparent, fixed pricing agreed before you travel',
-  'Support before, during and after your trip',
+  'Vehicle suitability discussed beforehand',
+  'Fare agreed upfront — no surprises',
+  'Family and luggage requirements arranged before pickup',
+  'Private, direct transfer — no shared shuttle',
+  'Professional, fully vetted local drivers',
 ]
 
 export default function WhyChooseUs() {
@@ -17,7 +16,7 @@ export default function WhyChooseUs() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-2 md:items-center md:gap-10">
         <Reveal>
           <h2 className="font-display text-2xl font-bold text-navy-900 md:text-4xl">
-            Why choose Northwest Airport Transfers
+            Know what you're getting — before you even book
           </h2>
           <p className="mt-4 text-slate-600">
             We're a local North West Sydney business built around one idea:

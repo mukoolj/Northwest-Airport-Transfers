@@ -91,12 +91,18 @@ export default function FareCalculator() {
                 {FARE_CATEGORIES.map((cat) => (
                   <div key={cat.id}>
                     <p className="text-[11px] font-semibold uppercase text-slate-500">{cat.title}</p>
-                    <p className="mt-1 font-display text-xl font-extrabold text-navy-900">${region[cat.id].now}</p>
+                    <p className="mt-1 flex items-baseline justify-center gap-1.5">
+                      <span className="text-sm text-slate-400 line-through">${region[cat.id].was}</span>
+                      <span className="font-display text-xl font-extrabold text-navy-900">${region[cat.id].now}</span>
+                    </p>
                     <p className="mt-1 text-[10px] leading-snug text-slate-500">{cat.shortDesc}</p>
                   </div>
                 ))}
               </div>
-              <p className="mt-4 text-center text-xs text-slate-500">
+              <p className="mt-3 text-center text-[11px] font-medium text-gold-700">
+                Normal fare shown crossed out — introductory fare highlighted, valid until 31 December 2026.
+              </p>
+              <p className="mt-2 text-center text-xs text-slate-500">
                 Drop-off fare shown — fixed, all tolls included. Airport pickup (arrival) adds ${AIRPORT_PICKUP_SURCHARGE}.
               </p>
               <div className="mt-4 flex justify-center">

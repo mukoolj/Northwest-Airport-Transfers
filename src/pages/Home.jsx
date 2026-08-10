@@ -4,9 +4,8 @@ import TrustBar from '../components/TrustBar'
 import FamilySection from '../components/FamilySection'
 import FareCalculator from '../components/FareCalculator'
 import IntroOfferBanner from '../components/IntroOfferBanner'
-import KeyFeatures from '../components/KeyFeatures'
-import CompetitorComparison from '../components/CompetitorComparison'
 import FleetSection from '../components/FleetSection'
+import LuggageReassurance from '../components/LuggageReassurance'
 import Testimonials from '../components/Testimonials'
 import WhyChooseUs from '../components/WhyChooseUs'
 import FareCategoryCards from '../components/FareCategoryCards'
@@ -14,7 +13,6 @@ import PricingTable from '../components/PricingTable'
 import PricingActions from '../components/PricingActions'
 import AirportPickupNote from '../components/AirportPickupNote'
 import WhatsAppNudge from '../components/WhatsAppNudge'
-import PricingCallout from '../components/PricingCallout'
 import WhatsAppCTA from '../components/WhatsAppCTA'
 import Reveal from '../components/Reveal'
 import Seo from '../components/Seo'
@@ -68,17 +66,11 @@ export default function Home() {
       </section>
       <WhatsAppNudge className="bg-canvas" />
 
-      <KeyFeatures />
-      <CompetitorComparison />
-
       <FleetSection />
-      <PricingCallout />
-
-      <Testimonials />
-      <PricingCallout />
+      <LuggageReassurance />
 
       <WhyChooseUs />
-      <PricingCallout />
+      <Testimonials />
 
       <section className="relative overflow-hidden bg-canvas-alt py-10 text-center md:py-16">
         <div
