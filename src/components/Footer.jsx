@@ -5,7 +5,7 @@ import { FacebookIcon, InstagramIcon } from './SocialIcons'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line bg-canvas-alt text-slate-600">
+    <footer id="site-footer" className="border-t border-line bg-canvas-alt text-slate-600">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div>
           <h3 className="font-display text-lg font-bold text-navy-900">

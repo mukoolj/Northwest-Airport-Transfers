@@ -1,58 +1,59 @@
-import { Phone } from 'lucide-react'
-import { BUSINESS } from '../lib/constants'
+import { QUOTE_REQUEST_MESSAGE } from '../lib/constants'
 import WhatsAppCTA from './WhatsAppCTA'
-import heroImage from '../assets/images/hero-airport.jpg'
-
-const BADGES = ['From $89', 'Fixed fare', 'All tolls included', 'No surge pricing']
+import heroImage from '../assets/images/jeep.jpg'
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-navy-900">
       <img
         src={heroImage}
-        alt=""
-        aria-hidden="true"
+        alt="White Jeep Grand Cherokee L, the vehicle used for Northwest Airport Transfers' private Sydney airport transfers"
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover object-[68%_center] md:object-[78%_center]"
       />
+      {/* Mobile: fairly uniform tint so text stays readable across the full card, since text spans most of the section height on narrow screens. */}
       <div
-        className="absolute inset-0"
+        aria-hidden="true"
+        className="absolute inset-0 md:hidden"
         style={{
           background:
-            'linear-gradient(to right, rgba(10,20,40,0.88) 0%, rgba(10,20,40,0.65) 60%, rgba(10,20,40,0.40) 100%)',
+            'linear-gradient(180deg, rgba(10,20,40,0.80) 0%, rgba(10,20,40,0.68) 45%, rgba(10,20,40,0.88) 100%)',
+        }}
+      />
+      {/* Desktop: dark on the text side, fading out toward the Jeep so it stays clearly visible. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 hidden md:block"
+        style={{
+          background:
+            'linear-gradient(to right, rgba(10,20,40,0.88) 0%, rgba(10,20,40,0.72) 45%, rgba(10,20,40,0.28) 100%)',
         }}
       />
 
-      <div className="relative mx-auto flex max-w-6xl flex-col items-start px-4 py-20 sm:px-6 sm:py-28 lg:py-36">
-        <span className="mb-4 inline-block rounded-full border border-gold-400/40 bg-gold-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-gold-400">
-          Fixed-Fare Airport Transfers
-        </span>
-        <h1 className="text-balance max-w-2xl font-display text-3xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
-          Stress-Free Airport Transfers Across North West Sydney
+      <div className="relative mx-auto flex max-w-6xl flex-col items-start px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
+        <h1 className="text-balance max-w-xl font-display text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
+          Private Sydney Airport Transfers from $99
         </h1>
-        <p className="mt-5 max-w-xl text-balance text-lg text-white/80 sm:text-xl">
-          Fixed fares, all tolls included, no surge pricing — ever.
+        <p className="mt-4 max-w-lg text-balance text-base text-white/85 sm:text-lg">
+          Comfortable, reliable airport transfers for families, groups and
+          business travellers across North-West and Western Sydney.
+        </p>
+        <p className="mt-4 max-w-lg text-sm font-medium text-gold-300 sm:text-base">
+          Fixed fares · Tolls included · Child seats available · No surge pricing
         </p>
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          {BADGES.map((badge) => (
-            <span
-              key={badge}
-              className="rounded-full bg-gradient-to-r from-gold-300 to-gold-500 px-3.5 py-1 text-xs font-bold text-navy-900"
-            >
-              {badge}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-          <WhatsAppCTA label="Book on WhatsApp" size="lg" theme="dark" />
+        <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+          <WhatsAppCTA
+            label="Get a Quote on WhatsApp"
+            message={QUOTE_REQUEST_MESSAGE}
+            size="lg"
+            theme="dark"
+          />
           <a
-            href={BUSINESS.phoneTel}
-            className="inline-flex items-center gap-2 rounded-full border border-white/25 px-8 py-4 text-base font-semibold text-white transition-colors hover:border-gold-400 hover:text-gold-400 sm:text-lg"
+            href="#fares"
+            className="inline-flex items-center justify-center rounded-full border border-white/25 px-8 py-4 text-base font-semibold text-white transition-colors hover:border-gold-400 hover:text-gold-400 sm:text-lg"
           >
-            <Phone size={20} />
-            Call {BUSINESS.phoneDisplay}
+            View Fares
           </a>
         </div>
       </div>

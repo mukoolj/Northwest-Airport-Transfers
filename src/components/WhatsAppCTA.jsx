@@ -3,7 +3,7 @@ import { whatsappLink } from '../lib/constants'
 import ResponseTimePromise from './ResponseTimePromise'
 
 export default function WhatsAppCTA({
-  label = 'Book on WhatsApp',
+  label = 'Get a Quote on WhatsApp',
   message,
   full = false,
   size = 'md',

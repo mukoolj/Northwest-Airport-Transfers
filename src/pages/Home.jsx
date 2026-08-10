@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
+import TrustBar from '../components/TrustBar'
+import FamilySection from '../components/FamilySection'
 import FareCalculator from '../components/FareCalculator'
 import IntroOfferBanner from '../components/IntroOfferBanner'
 import KeyFeatures from '../components/KeyFeatures'
@@ -28,14 +30,13 @@ export default function Home() {
       />
 
       <Hero />
-
-      <div className="relative bg-canvas pb-10 pt-0 md:pb-16">
-        <FareCalculator />
-      </div>
+      <TrustBar />
+      <FamilySection />
+      <FareCalculator />
 
       <IntroOfferBanner />
 
-      <section className="relative overflow-hidden bg-canvas py-10 md:py-16">
+      <section id="fares" className="relative scroll-mt-28 overflow-hidden bg-canvas py-10 md:scroll-mt-32 md:py-16">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-gold-300/20 blur-3xl"
@@ -92,7 +93,7 @@ export default function Home() {
             Message us on WhatsApp for a fixed quote — we reply within 15 minutes.
           </p>
           <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:mt-7">
-            <WhatsAppCTA label="Book on WhatsApp" size="lg" showPromise={false} />
+            <WhatsAppCTA label="Get a Quote on WhatsApp" size="lg" showPromise={false} />
             <Link
               to="/contact"
               className="inline-flex items-center justify-center rounded-full border border-navy-900/20 px-8 py-4 text-base font-semibold text-navy-900 transition-colors hover:border-gold-500 hover:text-gold-600"

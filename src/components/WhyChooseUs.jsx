@@ -25,7 +25,7 @@ export default function WhyChooseUs() {
             every time.
           </p>
           <div className="mt-6 md:mt-8">
-            <WhatsAppCTA label="Chat with us on WhatsApp" showPromise={false} />
+            <WhatsAppCTA label="Get a Quote on WhatsApp" showPromise={false} />
           </div>
         </Reveal>
 

@@ -19,6 +19,18 @@ export function whatsappLink(message) {
   return `https://wa.me/${BUSINESS.whatsappNumber}?text=${text}`;
 }
 
+// Structured quote-request template used by the primary homepage CTAs
+// (hero + family section) so a customer's WhatsApp message opens with
+// every field a driver needs already prompted.
+export const QUOTE_REQUEST_MESSAGE = `Hi, I'd like an airport transfer quote.
+Pickup suburb:
+Destination:
+Travel date:
+Pickup time:
+Passengers:
+Luggage:
+Child seats required: Yes/No`;
+
 // Regions: id, label, standard/family/group prices (was/now), suburbs
 export const REGIONS = [
   {
